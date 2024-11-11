@@ -1,0 +1,52 @@
+.amphi {
+    display: grid;
+    grid-template-columns: [Info] 1fr [DDD] 1fr [DDI] 1fr;
+
+    /* grid-template-columns: [info] 100px [DDD] 100px [DDI] 100px; */
+    grid-auto-flow: row dense;
+  /*   grid-auto-flow: column; */
+    grid-gap: 5px;
+  }
+  
+  [data-cohorte="Info"] {
+    grid-column: Info;
+  }
+  
+  [data-cohorte="DDD"] {
+    grid-column: DDD;
+  }
+  
+  [data-cohorte="DDI"] {
+    grid-column: DDI;
+  }
+  
+  [data-cohorte="T"] {
+    grid-column: T;
+  }
+
+  h1 {
+    display:flex;
+    place-content:center;
+    border-bottom: 1px solid black;
+  }
+
+  body,
+  html {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* .amphi {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+} */
+
+.amphi .card {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+}

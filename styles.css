@@ -25,9 +25,13 @@
   }
 
   h1 {
-    display:flex;
-    place-content:center;
+    display: flex;
+    place-content: center;
     border-bottom: 1px solid black;
+    position: sticky;
+    top: 0;
+    background: white; /* Ensure the background is not transparent */
+    z-index: 1000; /* Ensure it stays on top */
   }
 
   body,

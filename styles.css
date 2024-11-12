@@ -1,51 +1,43 @@
 .amphi {
-    display: grid;
-    grid-template-columns: [Info] 1fr [DDD] 1fr [DDI] 1fr;
-
-    /* grid-template-columns: [info] 100px [DDD] 100px [DDI] 100px; */
-    grid-auto-flow: row dense;
-  /*   grid-auto-flow: column; */
-    grid-gap: 5px;
-  }
-  
-  [data-cohorte="Info"] {
-    grid-column: Info;
-  }
-  
-  [data-cohorte="DDD"] {
-    grid-column: DDD;
-  }
-  
-  [data-cohorte="DDI"] {
-    grid-column: DDI;
-  }
-  
-  [data-cohorte="T"] {
-    grid-column: T;
-  }
-
-  h1 {
-    display: flex;
-    place-content: center;
-    border-bottom: 1px solid black;
-    position: sticky;
-    top: 0;
-    background: white; /* Ensure the background is not transparent */
-    z-index: 1000; /* Ensure it stays on top */
-  }
-
-  body,
-  html {
-    width: 100%;
-    height: 100%;
-  }
-  
-  /* .amphi {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
-  padding: 20px;
-} */
+  grid-template-columns: [Info] 1fr [DDD] 1fr [DDI] 1fr;
+  grid-auto-flow: row dense;
+  grid-gap: 5px;
+  justify-content: center; /* Center the grid horizontally */
+  margin: 0 auto; /* Center the grid container */
+}
+
+[data-cohorte="Info"] {
+  grid-column: Info;
+}
+
+[data-cohorte="DDD"] {
+  grid-column: DDD;
+}
+
+[data-cohorte="DDI"] {
+  grid-column: DDI;
+}
+
+[data-cohorte="T"] {
+  grid-column: T;
+}
+
+h1 {
+  display: flex;
+  place-content: center;
+  border-bottom: 1px solid black;
+  position: sticky;
+  top: 0;
+  background: white; /* Ensure the background is not transparent */
+  z-index: 1000; /* Ensure it stays on top */
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
 
 .amphi .card {
   background-color: #f8f9fa;
@@ -53,4 +45,15 @@
   border-radius: 5px;
   padding: 10px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the content horizontally */
+}
+
+.amphi .card img {
+  width: 100px; /* Set a fixed width */
+  height: 100px; /* Set a fixed height */
+  object-fit: cover; /* Ensure the image covers the area without stretching */
+  border-radius: 50%; /* Optional: make the image circular */
+  margin-bottom: 10px; /* Optional: add some space below the image */
 }
